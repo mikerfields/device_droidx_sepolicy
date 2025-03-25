@@ -18,11 +18,13 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     device/droidx/sepolicy/common/dynamic \
-    device/droidx/sepolicy/common/system
+    device/droidx/sepolicy/common/system \
+	hardware/google/pixel-sepolicy/turbo_adapter
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
     device/droidx/sepolicy/common/dynamic \
-    device/droidx/sepolicy/common/vendor
+    device/droidx/sepolicy/common/vendor \
+	hardware/google/pixel-sepolicy/turbo_adapter
 endif
 
 # Include atv rules on atv product
